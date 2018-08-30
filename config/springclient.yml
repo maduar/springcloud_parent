@@ -1,0 +1,20 @@
+server:
+  port: 12301
+  context-path: /${spring.application.name}/api
+
+spring:
+  application:
+    name: springcloud-client
+  boot:
+    admin:
+      url:  http://localhost:12300
+
+info:
+  desciption: springcloud_client
+  component: Web Server
+  version: @project.version@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/

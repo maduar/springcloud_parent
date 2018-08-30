@@ -14,6 +14,8 @@
         <module>springcloud_gateway</module>
         <module>ribbon_consumer</module>
         <module>springcloud_feign</module>
+        <module>config</module>
+        <module>springcloud_config</module>
     </modules>
     <packaging>pom</packaging>
     <name>springcloud_parent</name>
