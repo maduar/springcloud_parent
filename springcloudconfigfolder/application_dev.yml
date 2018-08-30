@@ -2,11 +2,6 @@ spring:
   application:
     name: springcloud-client
 
-info:
-  desciption: springcloud_client
-  component: Web Server
-  version: @project.version@
-
 eureka:
   client:
     serviceUrl:
