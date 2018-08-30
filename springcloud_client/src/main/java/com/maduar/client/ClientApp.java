@@ -13,13 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  * Hello world!
  */
 
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 @EnableEurekaClient
 public class ClientApp {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ClientApp.class).web(true).run(args);
+        SpringApplication.run(ClientApp.class, args);
     }
 }
