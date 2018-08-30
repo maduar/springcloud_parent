@@ -3,9 +3,20 @@ server:
 
 spring:
   application:
-    name: admin
+    name: springcloud_admin
+
+info:
+  desciption: springcloud_admin
+  component: Web Server
+
+management:
+  security:
+    enabled: true
+
+
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://@localhost:8761/eureka/
+#      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
