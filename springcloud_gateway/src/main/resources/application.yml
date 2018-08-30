@@ -1,0 +1,35 @@
+server:
+  port: 12333
+
+spring:
+  application:
+    name: gateway
+  security:
+    user:
+      name: maduar
+      password: maduar00
+  boot:
+    admin:
+      url: http://${spring.cloud.client.ipAddress}:12300
+info:
+  desciption: springcloud_gateway
+  component: Web Server
+  version: @project.version@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+
+
+
+application:
+  name:
+    client: springcloud_client
+
+zuul:
+  routes:
+    client:
+      path: /springcloud_client/api/**
+      serviceId: springcloud_client
+      stripPrefix: false
