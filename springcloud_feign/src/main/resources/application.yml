@@ -1,0 +1,24 @@
+server:
+  port: 12305
+  context-path: /${spring.application.name}/api
+
+spring:
+  application:
+    name: springcloud-feign
+  boot:
+    admin:
+      url:  http://localhost:12300
+#      url:  http://maduar1:maduar2@localhost:12300
+info:
+  desciption: springcloud_feign
+  component: Web Server
+  version: @project.version@
+
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
