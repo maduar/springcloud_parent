@@ -1,2 +1,12 @@
 # springcloud_parent
-springcloud + spring admin + eureka 
+
+## 1. component
+
+- springboot
+- springcloud
+- admin
+- eureka
+- zuul
+- config
+- feign
+- hystri
