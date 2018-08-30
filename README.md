@@ -9,4 +9,4 @@
 - zuul
 - config
 - feign
-- hystri
+- hystrix
