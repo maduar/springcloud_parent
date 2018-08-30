@@ -1,0 +1,27 @@
+server:
+  port: 12306
+#  context-path: /${spring.application.name}/api
+
+spring:
+  application:
+    name: springcloud_config
+  boot:
+    admin:
+      url:  http://localhost:12300
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/maduar/springcloud_parent.git #配置git仓库地址
+          searchPaths: springcloudconfigfolder #配置仓库路径
+      label: master #配置仓库的分支
+
+info:
+  desciption: springcloud_config
+  component: Web Server
+  version: @project.version@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
