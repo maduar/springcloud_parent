@@ -1,9 +1,9 @@
-#security:
-#  basic:
-#    enabled: true #关掉security框架自带的登陆弹出框
-#  user:
-#    name: maduar  # 用户名
-#    password: madaur00   # 用户密码
+security:
+  basic:
+    enabled: true #关掉security框架自带的登陆弹出框
+  user:
+    name: admin  # 用户名
+    password: admin   # 用户密码
 
 eureka:
 #  server:

@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 /**
  * Hello world!
  */
-@EnableWebSecurity
 @EnableEurekaServer
 @SpringBootApplication
 public class EurekaServerApp {

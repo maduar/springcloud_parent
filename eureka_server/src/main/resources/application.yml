@@ -11,3 +11,6 @@ info:
   desciption: eureka_server
   component: Web Server
 
+management:
+  security:
+    enabled: false
