@@ -1,13 +1,6 @@
-server:
-  port: 12301
-  context-path: /${spring.application.name}/api
-
 spring:
   application:
     name: springcloud-client
-  boot:
-    admin:
-      url:  http://localhost:12300
 
 info:
   desciption: springcloud_client
