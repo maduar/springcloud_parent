@@ -6,3 +6,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+
+server:
+  port: 12301
+  context-path: /${spring.application.name}/api
