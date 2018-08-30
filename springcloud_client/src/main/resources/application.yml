@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: springcloud_client
+    name: springcloud-client
   boot:
     admin:
       url:  http://localhost:12300

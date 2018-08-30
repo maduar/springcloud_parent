@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @email maduar@163.com
  *
  * */
-@FeignClient(serviceId = "springcloud-client")
+@FeignClient(serviceId = "springcloud-client", fallback = ApiServiceError.class)
 public interface ApiService {
 
     @GetMapping(value = "/springcloud-client/api/index")

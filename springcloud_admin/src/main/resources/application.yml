@@ -11,9 +11,7 @@ info:
 
 management:
   security:
-    enabled: true
-
-
+    enabled: false
 
 eureka:
   client:
