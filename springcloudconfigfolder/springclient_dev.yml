@@ -11,7 +11,7 @@ server:
   port: 12309
   context-path: /${spring.application.name}/api
 
-params: xxxdev00xx55
+params: xxxdev00xx88
 
 management:
   security:
