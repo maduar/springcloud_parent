@@ -2,14 +2,18 @@ spring:
   application:
     name: springcloud-client
 
-info:
-  desciption: springcloud_client
-  component: Web Server
-#  version: @project.version@
-
-params: xxxclient
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+
+server:
+  port: 12309
+  context-path: /${spring.application.name}/api
+
+params: xxxclient
+
+management:
+  security:
+    #关闭安全验证，否则访问refresh端点时会提示权限不足
+    enabled: false
