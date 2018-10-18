@@ -7,6 +7,8 @@ info:
   component: Web Server
   version: @project.version@
 
+params: xxxclient
+
 eureka:
   client:
     serviceUrl:
