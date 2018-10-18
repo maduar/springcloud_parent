@@ -1,16 +1,55 @@
 server:
   port: 8761
 spring:
+  profiles:
+    active: 8761
   application:
     name: eureka_server
-  boot:
-    admin:
-      url: http://${spring.cloud.client.ipAddress}:12300
+#  boot:
+#    admin:
+#      # admin配置context-path
+#      context-path: /
+#      # admin url
+#      url: http://${spring.cloud.client.ipAddress}:12300
+#      client:
+#        metadata:
+#          # admin server 账户
+#          user.name: admin
+#          user.password: admin
+#          # client端配置context-path
+#          management.context-path: /
 
 info:
   desciption: eureka_server
   component: Web Server
 
-management:
-  security:
-    enabled: false
+#management:
+#  security:
+#    enabled: false
+---
+spring:
+  profiles: 8761
+  application:
+    name: eureka_server1
+server:
+  port: 8761
+  tomcat:
+    uri-encoding: UTF-8
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://admin:admin@150.109.49.131:8761/eureka/
+---
+spring:
+  profiles: application_8762
+  application:
+    name: eureka_server2
+server:
+  port: 8762
+  tomcat:
+    uri-encoding: UTF-8
+
+
