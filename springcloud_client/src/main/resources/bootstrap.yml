@@ -1,3 +1,4 @@
+server.port: 12309
 spring:
   application:
     name: springcloud-client
