@@ -5,9 +5,11 @@ server:
 spring:
   application:
     name: springcloud_config
-  boot:
-    admin:
-      url:  http://localhost:12300
+  profiles:
+    active: dev
+#  boot:
+#    admin:
+#      url:  http://localhost:12300
   cloud:
     config:
       server:
@@ -16,12 +18,15 @@ spring:
           searchPaths: springcloudconfigfolder #配置仓库路径
       label: master #配置仓库的分支
 
+params: cococ
+
 info:
   desciption: springcloud_config
   component: Web Server
-  version: @project.version@
+#  version: @project.version@
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
