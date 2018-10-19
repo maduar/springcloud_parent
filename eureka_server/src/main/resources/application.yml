@@ -19,6 +19,23 @@ spring:
 #          # client端配置context-path
 #          management.context-path: /
 
+# security userinfo
+securityUser:
+  role:
+    admin: ADMIN
+    actuator: ACTUATOR
+  adminUser:
+    username: discoveryAdmin
+    password: discoveryAdminPwd
+  actuatorUser:
+    username: discoveryActuator
+    password: discoveryActuatorPwd
+
+# 关闭security自带登录框
+management:
+  security:
+    enabled: false
+
 info:
   desciption: eureka_server
   component: Web Server
@@ -41,7 +58,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://admin:admin@150.109.49.131:8761/eureka/
+      defaultZone: http://discoveryAdmin:discoveryAdminPwd@localhost/eureka/
+#      defaultZone: http://admin:admin@localhost:8761/eureka/
 ---
 spring:
   profiles: application_8762
