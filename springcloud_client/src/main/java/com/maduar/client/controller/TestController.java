@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @email maduar@163.com
  *
  * */
-@RefreshScope
 @RestController
+@RefreshScope
 public class TestController {
 
 

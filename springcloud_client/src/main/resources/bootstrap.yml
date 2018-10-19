@@ -1,18 +1,26 @@
 spring:
   application:
     name: springcloud-client
-  boot:
-    admin:
-      url:  http://localhost:12300
+  profile:
+    active: dev
+#  boot:
+#    admin:
+#      url:  http://localhost:12300
   cloud:
     config:
-      profile: dev #指定配置环境，配置文件如果是多环境则取名类似：config-dev.yml
-      name: application_dev #指定配置文件名字（多个配置文件以英文逗号隔开）
+      profile: dev
+      name: springclient_dev #指定配置文件名字（多个配置文件以英文逗号隔开）
       label: master #git仓库分支名
       discovery:
         enabled: true
         serviceId: springcloud_config #连接的配置中心名字（applicaiton.name）
+  rabbitmq:
+    host: 150.109.49.131
+    port: 5672
+    username: guest
+    password: rabbitMaduar310
 
+params: xxxclient
 
 eureka:
   client:
