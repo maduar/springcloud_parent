@@ -26,5 +26,5 @@ params: xxxclient
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+      defaultZone: http://discoveryAdmin:discoveryAdminPwd@localhost/eureka/
 
