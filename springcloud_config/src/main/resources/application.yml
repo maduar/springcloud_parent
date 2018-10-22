@@ -25,8 +25,3 @@ info:
   component: Web Server
 #  version: @project.version@
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-#      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
