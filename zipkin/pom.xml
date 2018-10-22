@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud_client</artifactId>
+    <artifactId>zipkin</artifactId>
 
-    <name>springcloud_client</name>
+    <name>zipkin</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -23,31 +23,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>1.5.2</version>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-server</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
-        </dependency>
-
     </dependencies>
 
     <!--spring boot打包的话需要指定一个唯一的入门-->
@@ -58,7 +40,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.maduar.client.ClientApp</mainClass>
+                    <mainClass>com.maduar.gateway.GateWayApp</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
@@ -71,6 +53,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
