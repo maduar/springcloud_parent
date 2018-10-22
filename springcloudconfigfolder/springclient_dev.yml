@@ -16,7 +16,3 @@ management:
 #    web:
 #      exposure:
 #        include: bus-refresh
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
