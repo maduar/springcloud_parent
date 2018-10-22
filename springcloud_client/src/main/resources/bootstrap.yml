@@ -22,3 +22,9 @@ spring:
     password: rabbitMaduar310
 
 params: xxxclient
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
+#      defaultZone: http://discoveryActuator:discoveryActuatorPwd@150.109.49.131:8761/eureka/

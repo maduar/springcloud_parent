@@ -2,11 +2,6 @@ spring:
   application:
     name: springcloud-client
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discoveryActuator:discoveryActuatorPwd@150.109.49.131:8761/eureka/
-
 server:
   port: 12309
 #  context-path: /${spring.application.name}/api
