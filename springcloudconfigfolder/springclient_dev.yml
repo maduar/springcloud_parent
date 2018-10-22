@@ -3,8 +3,6 @@ spring:
     name: springcloud-client
   zipkin:
     base-url: http://127.0.0.1:9411
-  sleuth:
-    enabled: false
 
 server:
   port: 12307
