@@ -5,7 +5,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
+      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
 
 server:
   port: 123019
