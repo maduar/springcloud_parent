@@ -4,14 +4,13 @@ spring:
     name: springclient
   profile:
     active: dev
-  cloud:
-    bus:
-      trace:
-        enable: true
 #  boot:
 #    admin:
 #      url:  http://localhost:12300
   cloud:
+    bus:
+      trace:
+        enable: true
     config:
       profile: dev
       name: springclient_dev #指定配置文件名字（多个配置文件以英文逗号隔开）
