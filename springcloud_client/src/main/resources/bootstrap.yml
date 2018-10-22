@@ -23,7 +23,17 @@ spring:
 
 params: xxxclient
 
+#discovery_url: 150.109.49.131:8761
+discovery_url: 127.0.0.1:8761
 eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+    leaseRenewalIntervalInSeconds: 60  #心跳间隔时间1s (for Dev)
+    leaseExpirationDurationInSeconds: 90  #连续2s未响应时将服务注销 (for Dev)
+#    metadataMap:
+#      zone: ali
   client:
+#    preferSameZoneEureka: true
     serviceUrl:
-      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
+      defaultZone: http://discoveryActuator:discoveryActuatorPwd@${discovery_url}/eureka/
