@@ -2,6 +2,8 @@ server:
   port: 9411
 
 zipkin:
+  service:
+    name: zipkin
   storage:
     type: mysql
 
@@ -16,3 +18,5 @@ spring:
     username: root
     password: maduarMysql
     driverClassName: com.mysql.jdbc.Driver
+  sleuth:
+    enabled: false
