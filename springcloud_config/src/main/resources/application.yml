@@ -11,12 +11,20 @@ spring:
 #    admin:
 #      url:  http://localhost:12300
   cloud:
+    bus:
+      trace:
+        enable: true
     config:
       server:
         git:
           uri: https://github.com/maduar/springcloud_parent.git #配置git仓库地址
           searchPaths: springcloudconfigfolder #配置仓库路径
-      label: master #配置仓库的分支
+      label: master #配置仓库的分
+  rabbitmq:
+    host: 150.109.49.131
+    port: 5672
+    username: guest
+    password: rabbitMaduar310
 
 params: cococ
 
