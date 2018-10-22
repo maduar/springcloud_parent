@@ -25,3 +25,12 @@ info:
   component: Web Server
 #  version: @project.version@
 
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+    leaseRenewalIntervalInSeconds: 60  #心跳间隔时间1s (for Dev)
+    leaseExpirationDurationInSeconds: 90  #连续2s未响应时将服务注销 (for Dev)
+  client:
+    serviceUrl:
+      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
