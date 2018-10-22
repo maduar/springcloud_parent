@@ -5,19 +5,20 @@ spring:
     active: 8761
   application:
     name: eureka_server
-#  boot:
-#    admin:
-#      # admin配置context-path
-#      context-path: /
-#      # admin url
-#      url: http://${spring.cloud.client.ipAddress}:12300
-#      client:
-#        metadata:
-#          # admin server 账户
-#          user.name: admin
-#          user.password: admin
-#          # client端配置context-path
-#          management.context-path: /
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  thymeleaf:
+    cache: false
+    content-type: text/html
+    enable: true
+    encoding: UTF-8
+    model: HTML5
+    # 静态资源路径
+    prefix: classpath:static
+    suffix: .html
 
 # security userinfo
 securityUser:
