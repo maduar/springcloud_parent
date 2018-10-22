@@ -22,6 +22,9 @@ spring:
     password: rabbitMaduar310
 
 params: xxxclient
+management:
+  security:
+    enabled: false
 
 #discovery_url: 150.109.49.131:8761
 discovery_url: 127.0.0.1:8761
