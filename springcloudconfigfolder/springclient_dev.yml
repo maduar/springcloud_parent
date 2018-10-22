@@ -5,10 +5,10 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discoveryActuator:discoveryActuatorPwd@127.0.0.1:8761/eureka/
+      defaultZone: http://discoveryActuator:discoveryActuatorPwd@150.109.49.131:8761/eureka/
 
 server:
-  port: 123019
+  port: 12309
 #  context-path: /${spring.application.name}/api
 
 params: xxxdev00xx22
