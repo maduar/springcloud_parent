@@ -8,7 +8,7 @@ eureka:
       defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8761/eureka/
 
 server:
-  port: 12309
+  port: 123019
 #  context-path: /${spring.application.name}/api
 
 params: xxxdev00xx22
@@ -17,7 +17,7 @@ management:
   security:
     #关闭安全验证，否则访问refresh端点时会提示权限不足
     enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
