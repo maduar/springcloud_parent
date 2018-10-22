@@ -3,7 +3,7 @@ spring:
     name: springcloud-client
 
 server:
-  port: 12308
+  port: 12301
 #  context-path: /${spring.application.name}/api
 
 params: xxxdev00xx22
