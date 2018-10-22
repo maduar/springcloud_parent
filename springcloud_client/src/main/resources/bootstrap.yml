@@ -1,7 +1,7 @@
 server.port: 12309
 spring:
   application:
-    name: springcloud-client
+    name: springclient
   profile:
     active: dev
 #  boot:
