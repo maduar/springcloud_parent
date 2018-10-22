@@ -4,6 +4,10 @@ spring:
     name: springclient
   profile:
     active: dev
+  cloud:
+    bus:
+      trace:
+        enable: true
 #  boot:
 #    admin:
 #      url:  http://localhost:12300
