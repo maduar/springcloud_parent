@@ -1,6 +1,9 @@
 server:
   port: 9411
 
+# logback log file
+logback_path: /Users/maduar/demo/log/zipkin
+
 zipkin:
   service:
     name: zipkin
