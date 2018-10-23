@@ -5,6 +5,7 @@ spring:
     rabbitmq:
       queue: zipkin
     sleuth:
+      enable: false
       sampler:
         percentage: 1.0
 
