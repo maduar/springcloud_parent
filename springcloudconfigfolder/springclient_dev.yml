@@ -1,21 +1,21 @@
-spring:
-  application:
-    name: springcloud-client
-  zipkin:
-    rabbitmq:
-      queue: zipkin
-    sleuth:
-      enable: false
-      sampler:
-        percentage: 1.0
-
-server:
-  port: 12307
-#  context-path: /${spring.application.name}/api
-
-params: xxxdev00xx22
-
-
-management:
-  security:
-    enabled: false
+#spring:
+#  application:
+#    name: springcloud-client
+#  zipkin:
+#    rabbitmq:
+#      queue: zipkin
+#    sleuth:
+#      enable: false
+#      sampler:
+#        percentage: 1.0
+#
+#server:
+#  port: 12307
+##  context-path: /${spring.application.name}/api
+#
+#params: xxxdev00xx22
+#
+#
+#management:
+#  security:
+#    enabled: false
