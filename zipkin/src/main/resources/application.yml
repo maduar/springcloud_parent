@@ -4,11 +4,17 @@ server:
 # logback log file
 logback_path: /Users/maduar/demo/log/zipkin
 
+# zikkin 使用 mysql 作为存储
 zipkin:
   service:
     name: zipkin
   storage:
     type: mysql
+
+# 关闭security自带登录框
+management:
+  security:
+    enabled: false
 
 spring:
   application:
@@ -29,3 +35,29 @@ spring:
     continueOnError: true
   sleuth:
     enabled: false
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  thymeleaf:
+    cache: false
+    content-type: text/html
+    enable: true
+    encoding: UTF-8
+    model: HTML5
+    # 静态资源路径
+    prefix: classpath:static
+    suffix: .html
+    
+# security userinfo
+securityUser:
+  role:
+    admin: ADMIN
+    actuator: ACTUATOR
+  adminUser:
+    username: zipkinAdmin
+    password: zipkinAdminPwd
+  actuatorUser:
+    username: zipkinActuator
+    password: zipkinActuatorPwd
