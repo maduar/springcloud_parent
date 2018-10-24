@@ -11,6 +11,8 @@ zipkin:
     type: mysql
 
 spring:
+  application:
+    name: zipkin
   rabbitmq:
     host: 150.109.49.131
     port: 5672
@@ -18,9 +20,12 @@ spring:
     password: rabbitMaduar310
     queue: zipkin
   datasource:
-    url: jdbc:mysql://localhost:3306/zipkin?autoReconnect=true
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://150.109.49.131:3306/zipkin?autoReconnect=true
     username: root
     password: maduarMysql
     driverClassName: com.mysql.jdbc.Driver
+    initialize: true
+    continueOnError: true
   sleuth:
     enabled: false
