@@ -10,7 +10,7 @@ spring:
         percentage: 1.0
 
 server:
-  port: 12309
+  port: 12307
 #  context-path: /${spring.application.name}/api
 
 params: xxxdev00xx22
